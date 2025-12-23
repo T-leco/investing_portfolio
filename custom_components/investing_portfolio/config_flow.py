@@ -10,6 +10,7 @@ from homeassistant import config_entries
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.data_entry_flow import FlowResult
 from homeassistant.exceptions import HomeAssistantError
+from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import InvestingAPI, AuthenticationError, PortfolioError, generate_x_udid, normalize_portfolio_name
 from .const import (
@@ -88,8 +89,9 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             x_udid = generate_x_udid(seed)
             
             try:
-                async with InvestingAPI() as api:
-                    result = await api.login(email, password, x_udid)
+                session = async_get_clientsession(self.hass)
+                api = InvestingAPI(session)
+                result = await api.login(email, password, x_udid)
                     
                 self._x_token = result["token"]
                 self._x_udid = x_udid
@@ -151,12 +153,13 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         
         # Fetch available portfolios
         try:
-            async with InvestingAPI() as api:
-                self._portfolios = await api.get_portfolios(
-                    self._x_token, 
-                    self._x_udid,
-                    position_only=True
-                )
+            session = async_get_clientsession(self.hass)
+            api = InvestingAPI(session)
+            self._portfolios = await api.get_portfolios(
+                self._x_token, 
+                self._x_udid,
+                position_only=True
+            )
             
             if not self._portfolios:
                 return self.async_abort(reason="no_portfolios")
