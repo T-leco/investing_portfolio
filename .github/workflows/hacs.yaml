@@ -17,6 +17,3 @@ jobs:
         uses: hacs/action@main
         with:
           category: integration
-          # Ignore brands check - only required for default HACS repos
-          # Description and topics must be set in GitHub UI
-          ignore: brands
