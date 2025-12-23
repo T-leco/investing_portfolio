@@ -1,0 +1,34 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+desktop.ini
+thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Project specific temporary files
+flujo.json
+icon_old.png
+inv_icon.png
+response.json
+*.js
+
+# Tests and documentation (excluded from GitHub as requested)
+tests/
+docs/
+verify_new_account.py
+debug_login.py
+get_md5.py
+run_tests_temp.py

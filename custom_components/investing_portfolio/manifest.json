@@ -1,0 +1,16 @@
+{
+    "domain": "investing_portfolio",
+    "name": "Investing Portfolio",
+    "codeowners": [
+        "@T-leco"
+    ],
+    "config_flow": true,
+    "dependencies": [],
+    "documentation": "https://github.com/T-leco/investing_portfolio",
+    "iot_class": "cloud_polling",
+    "issue_tracker": "https://github.com/T-leco/investing_portfolio/issues",
+    "requirements": [
+        "aiohttp>=3.8.0"
+    ],
+    "version": "1.0.0"
+}

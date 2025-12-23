@@ -1,0 +1,50 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Inicio de Sesión en Investing Portfolio",
+                "description": "Introduce tus credenciales de tu cuenta de Investing.com. Si originalmente te registraste con Google, puedes solicitar un restablecimiento de contraseña a tu email para obtener credenciales email/contraseña.",
+                "data": {
+                    "email": "Email",
+                    "password": "Contraseña"
+                },
+                "data_description": {
+                    "email": "Tu email de cuenta de Investing.com",
+                    "password": "Tu contraseña de cuenta de Investing.com"
+                }
+            },
+            "select_portfolio": {
+                "title": "Seleccionar Cartera",
+                "description": "Elige qué cartera añadir. Puedes añadir más carteras después como entradas separadas.",
+                "data": {
+                    "portfolio": "Cartera"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "No se puede conectar a la API de Investing.com. Verifica tu conexión a internet.",
+            "invalid_auth": "Autenticación fallida. Verifica tu email y contraseña.",
+            "invalid_portfolio": "Selección de cartera inválida.",
+            "unknown": "Ocurrió un error inesperado."
+        },
+        "abort": {
+            "already_configured": "Esta cartera ya está configurada.",
+            "no_portfolios": "No se encontraron carteras de inversión en tu cuenta. Solo se muestran las carteras con posiciones."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Opciones de Horario de Actualización",
+                "description": "Configura cuándo la integración debe obtener datos.",
+                "data": {
+                    "update_weekday_interval": "Intervalo de actualización (minutos, Lun-Vie)",
+                    "update_weekday_start": "Inicio horario de trading (hora, 0-23)",
+                    "update_weekday_end": "Fin horario de trading (hora, 0-23)",
+                    "update_night_time": "Hora actualización nocturna (HH:MM)",
+                    "update_morning_time": "Hora actualización de mañana (HH:MM)"
+                }
+            }
+        }
+    }
+}

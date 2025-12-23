@@ -1,0 +1,50 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Investing Portfolio Login",
+                "description": "Enter your Investing.com account credentials. If you originally signed up with Google, you can request a password reset to your email to get email/password credentials.",
+                "data": {
+                    "email": "Email",
+                    "password": "Password"
+                },
+                "data_description": {
+                    "email": "Your Investing.com account email",
+                    "password": "Your Investing.com account password"
+                }
+            },
+            "select_portfolio": {
+                "title": "Select Portfolio",
+                "description": "Choose which portfolio to add. You can add more portfolios later as separate entries.",
+                "data": {
+                    "portfolio": "Portfolio"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Cannot connect to Investing.com API. Check your internet connection.",
+            "invalid_auth": "Authentication failed. Check your email and password.",
+            "invalid_portfolio": "Invalid portfolio selection.",
+            "unknown": "An unexpected error occurred."
+        },
+        "abort": {
+            "already_configured": "This portfolio is already configured.",
+            "no_portfolios": "No investment portfolios found on your account. Only portfolios with positions are shown."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Update Schedule Options",
+                "description": "Configure when the integration should fetch data from Investing.com.",
+                "data": {
+                    "update_weekday_interval": "Update interval (minutes, Mon-Fri)",
+                    "update_weekday_start": "Trading hours start (hour, 0-23)",
+                    "update_weekday_end": "Trading hours end (hour, 0-23)",
+                    "update_night_time": "Night update time (HH:MM)",
+                    "update_morning_time": "Morning update time (HH:MM)"
+                }
+            }
+        }
+    }
+}
