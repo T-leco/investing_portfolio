@@ -1,8 +1,4 @@
-<p align="center">
-<picture>
-  <img alt="Investing Portfolio Logo" src="./logos/logo@2x.png" width="400">
-</picture>
-</p>
+![Investing Portfolio Logo](logos/logo@2x.png)
 
 <p align="center">
 <img src="https://img.shields.io/badge/HACS-Custom-orange.svg">
@@ -14,13 +10,6 @@
 
 <p align="center" style="font-weight:bold">
   🚀 Track your investments directly in Home Assistant.
-</p>
-
-<p align="center">
-  <a href="#features">✨ Features</a> ·
-  <a href="#installation">⬇️ Installation</a> ·
-  <a href="#entities-created">📊 Entities</a> ·
-  <a href="#troubleshooting">🐛 Troubleshooting</a>
 </p>
 
 <br>
@@ -59,7 +48,16 @@ Easiest install is via [HACS](https://hacs.xyz/):
 > [!NOTE]
 > HACS does not "configure" the integration for you. After installing via HACS, go to **Settings → Devices & Services → Add Integration** and search for "Investing Portfolio".
 
-For manual installation, copy `custom_components/investing_portfolio` to your `custom_components` folder in Home Assistant.
+### Manual Installation
+
+1. Download the latest release from [GitHub Releases](https://github.com/T-leco/investing_portfolio/releases).
+2. Extract the `custom_components/investing_portfolio` folder.
+3. Copy this folder to your Home Assistant configuration directory:
+   ```
+   /config/custom_components/investing_portfolio/
+   ```
+   The `config` folder is where your `configuration.yaml` file is located.
+4. Restart Home Assistant.
 
 ### Configuration
 
@@ -71,7 +69,6 @@ For manual installation, copy `custom_components/investing_portfolio` to your `c
 
 > [!TIP]
 > If you signed up with Google, use the "Forgot Password" feature on Investing.com to set a password. You can still use Google login in the mobile app.
-
 
 
 
