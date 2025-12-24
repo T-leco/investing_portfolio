@@ -48,7 +48,7 @@ class InvestingSensor(CoordinatorEntity[InvestingDataCoordinator], SensorEntity)
     """
 
     _attr_device_class = SensorDeviceClass.MONETARY
-    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_state_class = SensorStateClass.TOTAL
     _attr_native_unit_of_measurement = CURRENCY_EURO
     _attr_has_entity_name = False
     _attr_icon = "mdi:cash-multiple"
@@ -105,7 +105,7 @@ class OpenPLSensor(CoordinatorEntity[InvestingDataCoordinator], SensorEntity):
     """Sensor for open profit/loss (total change)."""
 
     _attr_device_class = SensorDeviceClass.MONETARY
-    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_state_class = SensorStateClass.TOTAL
     _attr_native_unit_of_measurement = CURRENCY_EURO
     _attr_has_entity_name = False
     _attr_icon = "mdi:chart-line-variant"
@@ -178,7 +178,7 @@ class DailyPLSensor(CoordinatorEntity[InvestingDataCoordinator], SensorEntity):
     """Sensor for daily profit/loss."""
 
     _attr_device_class = SensorDeviceClass.MONETARY
-    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_state_class = SensorStateClass.TOTAL
     _attr_native_unit_of_measurement = CURRENCY_EURO
     _attr_has_entity_name = False
     _attr_icon = "mdi:calendar-today"
