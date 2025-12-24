@@ -3,7 +3,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/HACS-Custom-orange.svg">
 <img src="https://img.shields.io/maintenance/yes/2025.svg">
-<img src="https://img.shields.io/badge/version-1.0.0-blue">
+<img src="https://img.shields.io/badge/version-1.0.1-blue">
 <a href="https://github.com/T-leco/investing_portfolio/issues"><img alt="Issues" src="https://img.shields.io/github/issues/T-leco/investing_portfolio?color=0088ff"></a>
 <a href="https://www.buymeacoffee.com/teleco"><img alt="Buy Me A Coffee" src="https://img.shields.io/badge/support-buymeacoffee?logo=buymeacoffee&logoColor=black&color=%23FFDD00"></a>
 </p>
